@@ -8,6 +8,7 @@ import me.chanjar.weixin.open.bean.result.WxOpenResult;
 import org.jetbrains.annotations.Nullable;
 
 import java.io.Serializable;
+import java.util.List;
 
 
 /**

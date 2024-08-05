@@ -25,7 +25,7 @@ public class WxOpenApplyIcpFilingAppletsInfo implements Serializable{
 	 * 小程序负责人信息
 	 */
 	@SerializedName("principal_info")
-	private com.ruoyi.common.open.bean.icp.WxOpenApplyIcpFilingAppletsPrincipalInfo principalInfo;
+	private WxOpenApplyIcpFilingAppletsPrincipalInfo principalInfo;
 
 	public WxOpenApplyIcpFilingAppletsBaseInfo getBasInfo() {
 		return basInfo;

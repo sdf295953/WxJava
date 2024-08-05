@@ -4,7 +4,7 @@ package me.chanjar.weixin.open.api;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.open.bean.icp.*;
 import me.chanjar.weixin.open.bean.result.WxOpenResult;
-
+import com.google.gson.Gson;
 /**
  * 小程序备案
  *
@@ -116,7 +116,7 @@ public interface WxOpenMaIcpService {
   /**
    * 申请小程序备案
    */
-  public WxOpenApplyIcpFilingResult applyIcpFiling(JSONObject param, String appId) throws WxErrorException;
+  public WxOpenApplyIcpFilingResult applyIcpFiling(Gson param, String appId) throws WxErrorException;
 
   /**
    * 注销小程序备案

@@ -7,6 +7,7 @@ import me.chanjar.weixin.open.api.WxOpenService;
 import me.chanjar.weixin.open.bean.icp.*;
 import me.chanjar.weixin.open.bean.result.WxOpenResult;
 import me.chanjar.weixin.open.executor.material.WxOpenMaterialUploadRequestExecutor;
+import com.google.gson.Gson;
 
 public class WxOpenMaIcpServiceImpl extends WxOpenServiceApacheHttpClientImpl implements WxOpenMaIcpService {
 
@@ -54,9 +55,10 @@ public class WxOpenMaIcpServiceImpl extends WxOpenServiceApacheHttpClientImpl im
    * 申请小程序备案
    */
   @Override
-  public WxOpenApplyIcpFilingResult applyIcpFiling(JSONObject param, String appId) throws WxErrorException {
+  public WxOpenApplyIcpFilingResult applyIcpFiling(Gson param, String appId) throws WxErrorException {
     String url = APPLY_ICP_FILING + "?access_token=" + wxOpenService.getWxOpenComponentService().getAuthorizerAccessToken(appId, false);
-    String response = post(url, JSONObject.toJSONString(param));
+
+    String response = post(url, param.toString());
     return WxMaGsonBuilder.create().fromJson(response, WxOpenApplyIcpFilingResult.class);
   }
 
@@ -68,7 +70,7 @@ public class WxOpenMaIcpServiceImpl extends WxOpenServiceApacheHttpClientImpl im
     WxOpenApplyIcpFilingCancel cancel = new WxOpenApplyIcpFilingCancel();
     cancel.setCancelType(cancelType);
 
-    String response = post(CANCEL_ICP_FILING, JSONObject.toJSONString(cancel));
+    String response = post(CANCEL_ICP_FILING, WxMaGsonBuilder.create().toJson(cancel));
     return WxMaGsonBuilder.create().fromJson(response, WxOpenResult.class);
   }
 
