@@ -4,11 +4,18 @@ import java.io.Serializable;
 
 import com.google.gson.annotations.SerializedName;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 /**
  * 获取证件类型
  * @author byk
  *
  */
+@Getter
+@Setter
+@NoArgsConstructor
 public class WxOpenQueryIcpCertificateTypeItem implements Serializable{
 
 	/**
@@ -28,37 +35,6 @@ public class WxOpenQueryIcpCertificateTypeItem implements Serializable{
 	@SerializedName("remark")
 	private String remark;
 
-	public Integer getType() {
-		return type;
-	}
-
-	public void setType(Integer type) {
-		this.type = type;
-	}
-
-	public Integer getSubjectType() {
-		return subjectType;
-	}
-
-	public void setSubjectType(Integer subjectType) {
-		this.subjectType = subjectType;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getRemark() {
-		return remark;
-	}
-
-	public void setRemark(String remark) {
-		this.remark = remark;
-	}
-
+	
 
 }

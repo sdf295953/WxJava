@@ -2,6 +2,9 @@ package me.chanjar.weixin.open.bean.icp;
 
 import java.util.List;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import me.chanjar.weixin.open.bean.result.WxOpenResult;
 
 /**
@@ -9,6 +12,9 @@ import me.chanjar.weixin.open.bean.result.WxOpenResult;
  * @author byk
  *
  */
+@Getter
+@Setter
+@NoArgsConstructor
 public class WxOpenQueryIcpServiceContentTypesResult extends WxOpenResult{
 
 	/**
@@ -19,12 +25,7 @@ public class WxOpenQueryIcpServiceContentTypesResult extends WxOpenResult{
 	 * 服务内容类型列表
 	 */
 	private List<WxOpenQueryIcpServiceContentTypesItem> items;
-	public List<WxOpenQueryIcpServiceContentTypesItem> getItems() {
-		return items;
-	}
-	public void setItems(List<WxOpenQueryIcpServiceContentTypesItem> items) {
-		this.items = items;
-	}
+	
 
 
 }

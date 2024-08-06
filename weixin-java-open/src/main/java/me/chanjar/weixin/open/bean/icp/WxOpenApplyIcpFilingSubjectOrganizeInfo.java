@@ -4,11 +4,18 @@ import java.io.Serializable;
 
 import com.google.gson.annotations.SerializedName;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 /**
  * 主体额外信息（个人备案时，如果存在与主体负责人信息相同的字段，则填入相同的值）
  * @author byk
  *
  */
+@Getter
+@Setter
+@NoArgsConstructor
 public class WxOpenApplyIcpFilingSubjectOrganizeInfo implements Serializable{
 
 	/**
@@ -44,42 +51,5 @@ public class WxOpenApplyIcpFilingSubjectOrganizeInfo implements Serializable{
 	@SerializedName("certificate_photo")
 	private String photo;
 
-	public String getType() {
-		return type;
-	}
-
-	public void setType(String type) {
-		this.type = type;
-	}
-
-	public String getNumber() {
-		return number;
-	}
-
-	public void setNumber(String number) {
-		this.number = number;
-	}
-
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
-	public String getPhoto() {
-		return photo;
-	}
-
-	public void setPhoto(String photo) {
-		this.photo = photo;
-	}
-
-	@Override
-	public String toString() {
-		return "WxOpenApplyIcpFilingSubjectOrganizeInfo [type=" + type + ", number=" + number + ", address=" + address + ", photo=" + photo + "]";
-	}
-
-
+	
 }

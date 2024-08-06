@@ -1,5 +1,9 @@
 package me.chanjar.weixin.open.api;
 
+import java.io.File;
+import java.util.List;
+import java.util.Map;
+
 import cn.binarywang.wx.miniapp.api.WxMaService;
 import cn.binarywang.wx.miniapp.bean.WxMaAuditMediaUploadResult;
 import cn.binarywang.wx.miniapp.bean.WxMaUploadAuthMaterialResult;
@@ -8,11 +12,30 @@ import me.chanjar.weixin.open.bean.ma.WxMaPrefetchDomain;
 import me.chanjar.weixin.open.bean.ma.WxMaScheme;
 import me.chanjar.weixin.open.bean.message.WxOpenMaSubmitAuditMessage;
 import me.chanjar.weixin.open.bean.message.WxOpenMaVerifyBetaWeappMessage;
-import me.chanjar.weixin.open.bean.result.*;
-
-import java.io.File;
-import java.util.List;
-import java.util.Map;
+import me.chanjar.weixin.open.bean.result.WxDownlooadQrcodeJumpResult;
+import me.chanjar.weixin.open.bean.result.WxGetQrcodeJumpResult;
+import me.chanjar.weixin.open.bean.result.WxOpenMaApplyLiveInfoResult;
+import me.chanjar.weixin.open.bean.result.WxOpenMaBindTesterResult;
+import me.chanjar.weixin.open.bean.result.WxOpenMaCategoryListResult;
+import me.chanjar.weixin.open.bean.result.WxOpenMaDomainConfirmFileResult;
+import me.chanjar.weixin.open.bean.result.WxOpenMaDomainResult;
+import me.chanjar.weixin.open.bean.result.WxOpenMaGetCodePrivacyInfoResult;
+import me.chanjar.weixin.open.bean.result.WxOpenMaGrayReleasePlanResult;
+import me.chanjar.weixin.open.bean.result.WxOpenMaHistoryVersionResult;
+import me.chanjar.weixin.open.bean.result.WxOpenMaPageListResult;
+import me.chanjar.weixin.open.bean.result.WxOpenMaPrefetchDomainResult;
+import me.chanjar.weixin.open.bean.result.WxOpenMaQueryAuditResult;
+import me.chanjar.weixin.open.bean.result.WxOpenMaQueryQuotaResult;
+import me.chanjar.weixin.open.bean.result.WxOpenMaSearchStatusResult;
+import me.chanjar.weixin.open.bean.result.WxOpenMaShowItemResult;
+import me.chanjar.weixin.open.bean.result.WxOpenMaSubmitAuditResult;
+import me.chanjar.weixin.open.bean.result.WxOpenMaTesterListResult;
+import me.chanjar.weixin.open.bean.result.WxOpenMaVisitStatusResult;
+import me.chanjar.weixin.open.bean.result.WxOpenMaWeappSupportVersionResult;
+import me.chanjar.weixin.open.bean.result.WxOpenMaWebDomainResult;
+import me.chanjar.weixin.open.bean.result.WxOpenResult;
+import me.chanjar.weixin.open.bean.result.WxOpenVersioninfoResult;
+import me.chanjar.weixin.open.bean.result.WxQrcodeJumpRule;
 
 /**
  * <a href="https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&t=resource/res_list&verify=1&id=open1489144594_DhNoV&token=&lang=zh_CN">微信开放平台代小程序实现服务能力</a>

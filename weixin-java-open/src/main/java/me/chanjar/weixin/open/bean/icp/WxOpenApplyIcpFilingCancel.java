@@ -4,11 +4,18 @@ import java.io.Serializable;
 
 import com.google.gson.annotations.SerializedName;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 /**
  * 注销小程序备案
  * @author byk
  *
  */
+@Getter
+@Setter
+@NoArgsConstructor
 public class WxOpenApplyIcpFilingCancel implements Serializable{
 
 	/**
@@ -21,13 +28,7 @@ public class WxOpenApplyIcpFilingCancel implements Serializable{
 	@SerializedName("cancel_type")
 	private Integer cancelType;
 
-	public Integer getCancelType() {
-		return cancelType;
-	}
-
-	public void setCancelType(Integer cancelType) {
-		this.cancelType = cancelType;
-	}
+	
 
 
 }

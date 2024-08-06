@@ -4,11 +4,18 @@ import java.io.Serializable;
 
 import com.google.gson.annotations.SerializedName;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 /**
  * 主体负责人信息
  * @author byk
  *
  */
+@Getter
+@Setter
+@NoArgsConstructor
 public class WxOpenApplyIcpFilingSubjectPrincipalInfo implements Serializable{
 
 	/**
@@ -92,106 +99,5 @@ public class WxOpenApplyIcpFilingSubjectPrincipalInfo implements Serializable{
 	@SerializedName("verify_task_id")
 	private String verifyTaskId;
 
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getMobile() {
-		return mobile;
-	}
-
-	public void setMobile(String mobile) {
-		this.mobile = mobile;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public String getEmergencyContact() {
-		return emergencyContact;
-	}
-
-	public void setEmergencyContact(String emergencyContact) {
-		this.emergencyContact = emergencyContact;
-	}
-
-	public Integer getCertificateType() {
-		return certificateType;
-	}
-
-	public void setCertificateType(Integer certificateType) {
-		this.certificateType = certificateType;
-	}
-
-	public String getCertificateNumber() {
-		return certificateNumber;
-	}
-
-	public void setCertificateNumber(String certificateNumber) {
-		this.certificateNumber = certificateNumber;
-	}
-
-	public String getCertificateValidityDateStart() {
-		return certificateValidityDateStart;
-	}
-
-	public void setCertificateValidityDateStart(String certificateValidityDateStart) {
-		this.certificateValidityDateStart = certificateValidityDateStart;
-	}
-
-	public String getCertificateValidityDateEnd() {
-		return certificateValidityDateEnd;
-	}
-
-	public void setCertificateValidityDateEnd(String certificateValidityDateEnd) {
-		this.certificateValidityDateEnd = certificateValidityDateEnd;
-	}
-
-	public String getCertificatePhotoFront() {
-		return certificatePhotoFront;
-	}
-
-	public void setCertificatePhotoFront(String certificatePhotoFront) {
-		this.certificatePhotoFront = certificatePhotoFront;
-	}
-
-	public String getCertificatePhotoBack() {
-		return certificatePhotoBack;
-	}
-
-	public void setCertificatePhotoBack(String certificatePhotoBack) {
-		this.certificatePhotoBack = certificatePhotoBack;
-	}
-
-	public String getAuthorizationLetter() {
-		return authorizationLetter;
-	}
-
-	public void setAuthorizationLetter(String authorizationLetter) {
-		this.authorizationLetter = authorizationLetter;
-	}
-
-	public String getVerifyTaskId() {
-		return verifyTaskId;
-	}
-
-	public void setVerifyTaskId(String verifyTaskId) {
-		this.verifyTaskId = verifyTaskId;
-	}
-
-	@Override
-	public String toString() {
-		return "WxOpenApplyIcpFilingSubjectPrincipalInfo [name=" + name + ", mobile=" + mobile + ", email=" + email + ", emergencyContact=" + emergencyContact + ", certificateType=" + certificateType + ", certificateNumber=" + certificateNumber + ", certificateValidityDateStart=" + certificateValidityDateStart + ", certificateValidityDateEnd=" + certificateValidityDateEnd + ", certificatePhotoFront=" + certificatePhotoFront + ", certificatePhotoBack=" + certificatePhotoBack + ", authorizationLetter=" + authorizationLetter + ", verifyTaskId=" + verifyTaskId + "]";
-	}
-
-
+	
 }

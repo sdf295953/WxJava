@@ -2,6 +2,9 @@ package me.chanjar.weixin.open.bean.icp;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import me.chanjar.weixin.open.bean.result.WxOpenResult;
 
 /**
@@ -9,6 +12,9 @@ import me.chanjar.weixin.open.bean.result.WxOpenResult;
  * @author byk
  *
  */
+@Getter
+@Setter
+@NoArgsConstructor
 public class WxOpenIcpCreateIcpVerifyTaskResult extends WxOpenResult{
 
 	/**
@@ -19,13 +25,7 @@ public class WxOpenIcpCreateIcpVerifyTaskResult extends WxOpenResult{
 	@JsonProperty("task_id")
 	private String taskId;
 
-	public String getTaskId() {
-		return taskId;
-	}
-
-	public void setTaskId(String taskId) {
-		this.taskId = taskId;
-	}
+	
 
 
 }

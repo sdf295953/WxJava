@@ -7,12 +7,19 @@ import java.util.Map;
 
 import com.google.gson.annotations.SerializedName;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 /**
  * 文件上传
  *
  * @author byk
  *
  */
+@Getter
+@Setter
+@NoArgsConstructor
 public class WxOpenUploadIcpMedia implements Serializable {
 
 	/**
@@ -45,37 +52,7 @@ public class WxOpenUploadIcpMedia implements Serializable {
 	 */
 	private File media;
 
-	public String getType() {
-		return type;
-	}
-
-	public void setType(String type) {
-		this.type = type;
-	}
-
-	public String getCertificateType() {
-		return certificateType;
-	}
-
-	public void setCertificateType(String certificateType) {
-		this.certificateType = certificateType;
-	}
-
-	public String getIcpOrderField() {
-		return icpOrderField;
-	}
-
-	public void setIcpOrderField(String icpOrderField) {
-		this.icpOrderField = icpOrderField;
-	}
-
-	public File getMedia() {
-		return media;
-	}
-
-	public void setMedia(File media) {
-		this.media = media;
-	}
+	
 
 	public Map<String, String> getForm() {
 		Map<String, String> form = new HashMap<>();
@@ -88,9 +65,5 @@ public class WxOpenUploadIcpMedia implements Serializable {
 		return form;
 	}
 
-	@Override
-	public String toString() {
-		return "WxOpenUploadIcpMedia [type=" + type + ", certificateType=" + certificateType + ", icpOrderField=" + icpOrderField + ", media=" + media + "]";
-	}
-
+	
 }

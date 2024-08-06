@@ -4,11 +4,18 @@ import java.io.Serializable;
 
 import com.google.gson.annotations.SerializedName;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 /**
  * 法人信息（非个人备案，且主体负责人不是法人时，必填）
  * @author byk
  *
  */
+@Getter
+@Setter
+@NoArgsConstructor
 public class WxOpenApplyIcpFilingSubjectLegaPersonInfo implements Serializable{
 
 	/**
@@ -28,26 +35,7 @@ public class WxOpenApplyIcpFilingSubjectLegaPersonInfo implements Serializable{
 	@SerializedName("certificate_number")
 	private String certificateNumber;
 
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getCertificateNumber() {
-		return certificateNumber;
-	}
-
-	public void setCertificateNumber(String certificateNumber) {
-		this.certificateNumber = certificateNumber;
-	}
-
-	@Override
-	public String toString() {
-		return "WxOpenApplyIcpFilingSubjectLegaPersonInfo [name=" + name + ", certificateNumber=" + certificateNumber + "]";
-	}
+	
 
 
 }

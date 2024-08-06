@@ -41,6 +41,7 @@ public class GraalProcessor extends AbstractProcessor {
       handleSuperClass(annotatedClass);
     }
 
+
     //只有最后一轮才可以写文件，否则文件会被重复打开，报错！
     if (!roundEnv.processingOver()) {
       return false;

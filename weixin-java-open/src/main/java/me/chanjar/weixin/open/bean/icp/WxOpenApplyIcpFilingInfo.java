@@ -4,11 +4,18 @@ import java.io.Serializable;
 
 import com.google.gson.annotations.SerializedName;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 /**
  * 申请小程序备案  参数
  * @author byk
  *
  */
+@Getter
+@Setter
+@NoArgsConstructor
 public class WxOpenApplyIcpFilingInfo implements Serializable{
 
 	/**
@@ -34,29 +41,5 @@ public class WxOpenApplyIcpFilingInfo implements Serializable{
 	@SerializedName("icp_materials")
 	private WxOpenApplyIcpFilingMaterials icpMaterials;
 
-	public WxOpenApplyIcpFilingSubjectInfo getIcpSubject() {
-		return icpSubject;
-	}
-
-	public void setIcpSubject(WxOpenApplyIcpFilingSubjectInfo icpSubject) {
-		this.icpSubject = icpSubject;
-	}
-
-	public WxOpenApplyIcpFilingAppletsInfo getIcpApplets() {
-		return icpApplets;
-	}
-
-	public void setIcpApplets(WxOpenApplyIcpFilingAppletsInfo icpApplets) {
-		this.icpApplets = icpApplets;
-	}
-
-	public WxOpenApplyIcpFilingMaterials getIcpMaterials() {
-		return icpMaterials;
-	}
-
-	public void setIcpMaterials(WxOpenApplyIcpFilingMaterials icpMaterials) {
-		this.icpMaterials = icpMaterials;
-	}
-
-
+	
 }

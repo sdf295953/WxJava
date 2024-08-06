@@ -4,11 +4,18 @@ import java.io.Serializable;
 
 import com.google.gson.annotations.SerializedName;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 /**
  * 驳回原因，备案不通过时返回
  * @author byk
  *
  */
+@Getter
+@Setter
+@NoArgsConstructor
 public class WxOpenIcpEntranceAuditData implements Serializable{
 
 	/**
@@ -34,29 +41,6 @@ public class WxOpenIcpEntranceAuditData implements Serializable{
 	@SerializedName("suggest")
 	private String suggest;
 
-	public String getKeyName() {
-		return keyName;
-	}
-
-	public void setKeyName(String keyName) {
-		this.keyName = keyName;
-	}
-
-	public String getError() {
-		return error;
-	}
-
-	public void setError(String error) {
-		this.error = error;
-	}
-
-	public String getSuggest() {
-		return suggest;
-	}
-
-	public void setSuggest(String suggest) {
-		this.suggest = suggest;
-	}
-
+	
 
 }

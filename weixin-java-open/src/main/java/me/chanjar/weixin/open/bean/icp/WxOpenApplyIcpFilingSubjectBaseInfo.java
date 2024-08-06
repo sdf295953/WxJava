@@ -4,11 +4,18 @@ import java.io.Serializable;
 
 import com.google.gson.annotations.SerializedName;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 /**
  * 备案主体信息
  * @author byk
  *
  */
+@Getter
+@Setter
+@NoArgsConstructor
 public class WxOpenApplyIcpFilingSubjectBaseInfo implements Serializable{
 
 	/**
@@ -69,75 +76,6 @@ public class WxOpenApplyIcpFilingSubjectBaseInfo implements Serializable{
 	@SerializedName("record_number")
 	private String recordNumber;
 
-	public Integer getType() {
-		return type;
-	}
-
-	public void setType(Integer type) {
-		this.type = type;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getProvince() {
-		return province;
-	}
-
-	public void setProvince(String province) {
-		this.province = province;
-	}
-
-	public String getCity() {
-		return city;
-	}
-
-	public void setCity(String city) {
-		this.city = city;
-	}
-
-	public String getDistrict() {
-		return district;
-	}
-
-	public void setDistrict(String district) {
-		this.district = district;
-	}
-
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
-	public String getComment() {
-		return comment;
-	}
-
-	public void setComment(String comment) {
-		this.comment = comment;
-	}
-
-	public String getRecordNumber() {
-		return recordNumber;
-	}
-
-	public void setRecordNumber(String recordNumber) {
-		this.recordNumber = recordNumber;
-	}
-
-	@Override
-	public String toString() {
-		return "WxOpenApplyIcpFilingSubjectBaseInfo [type=" + type + ", name=" + name + ", province=" + province + ", city=" + city + ", district=" + district + ", address=" + address + ", comment=" + comment + ", recordNumber=" + recordNumber + "]";
-	}
-
-
+	
 
 }

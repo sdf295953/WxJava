@@ -3,11 +3,18 @@ package me.chanjar.weixin.open.bean.icp;
 import java.io.Serializable;
 import java.util.List;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 /**
  * 获取单位性质
  * @author byk
  *
  */
+@Getter
+@Setter
+@NoArgsConstructor
 public class WxOpenQueryIcpSubjectTypeResult implements Serializable{
 	/**
 	 *
@@ -19,12 +26,7 @@ public class WxOpenQueryIcpSubjectTypeResult implements Serializable{
 	 */
 	private List<WxOpenQueryIcpSubjectTypeItem> items;
 
-	public List<WxOpenQueryIcpSubjectTypeItem> getItems() {
-		return items;
-	}
-	public void setItems(List<WxOpenQueryIcpSubjectTypeItem> items) {
-		this.items = items;
-	}
+	
 
 
 }

@@ -4,6 +4,9 @@ import java.util.List;
 
 import com.google.gson.annotations.SerializedName;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import me.chanjar.weixin.open.bean.result.WxOpenResult;
 
 /**
@@ -11,6 +14,9 @@ import me.chanjar.weixin.open.bean.result.WxOpenResult;
  * @author byk
  *
  */
+@Getter
+@Setter
+@NoArgsConstructor
 public class WxOpenApplyIcpFilingResult  extends WxOpenResult{
 
 	/**
@@ -23,18 +29,7 @@ public class WxOpenApplyIcpFilingResult  extends WxOpenResult{
 	@SerializedName("hints")
 	private List<WxOpenApplyIcpFilingHint> hints;
 
-	public List<WxOpenApplyIcpFilingHint> getHints() {
-		return hints;
-	}
-
-	public void setHints(List<WxOpenApplyIcpFilingHint> hints) {
-		this.hints = hints;
-	}
-
-	@Override
-	public String toString() {
-		return "WxOpenApplyIcpFilingResult [hints=" + hints + "]";
-	}
+	
 
 
 }

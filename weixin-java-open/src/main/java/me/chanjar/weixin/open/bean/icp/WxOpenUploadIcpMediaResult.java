@@ -2,9 +2,15 @@ package me.chanjar.weixin.open.bean.icp;
 
 import com.google.gson.annotations.SerializedName;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import me.chanjar.weixin.mp.util.json.WxMpGsonBuilder;
 import me.chanjar.weixin.open.bean.result.WxOpenResult;
 
+@Getter
+@Setter
+@NoArgsConstructor
 public class WxOpenUploadIcpMediaResult extends WxOpenResult {
 
 	/**
@@ -22,31 +28,9 @@ public class WxOpenUploadIcpMediaResult extends WxOpenResult {
 	private String createdAt;
 
 	public static WxOpenUploadIcpMediaResult fromJson(String json) {
-	    return WxMpGsonBuilder.create().fromJson(json, WxOpenUploadIcpMediaResult.class);
-	  }
-
-	public String getType() {
-		return type;
+		return WxMpGsonBuilder.create().fromJson(json, WxOpenUploadIcpMediaResult.class);
 	}
 
-	public void setType(String type) {
-		this.type = type;
-	}
-
-	public String getMediaId() {
-		return mediaId;
-	}
-
-	public void setMediaId(String mediaId) {
-		this.mediaId = mediaId;
-	}
-
-	public String getCreatedAt() {
-		return createdAt;
-	}
-
-	public void setCreatedAt(String createdAt) {
-		this.createdAt = createdAt;
-	}
+	
 
 }

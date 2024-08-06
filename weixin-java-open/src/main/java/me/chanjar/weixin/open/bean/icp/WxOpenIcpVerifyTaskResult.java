@@ -2,6 +2,9 @@ package me.chanjar.weixin.open.bean.icp;
 
 import com.google.gson.annotations.SerializedName;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import me.chanjar.weixin.open.bean.result.WxOpenResult;
 
 /**
@@ -10,7 +13,9 @@ import me.chanjar.weixin.open.bean.result.WxOpenResult;
  * @author byk
  *
  */
-
+@Getter
+@Setter
+@NoArgsConstructor
 public class WxOpenIcpVerifyTaskResult extends WxOpenResult {
 
 	/**
@@ -24,20 +29,6 @@ public class WxOpenIcpVerifyTaskResult extends WxOpenResult {
 	@SerializedName("face_status")
 	private Integer faceStatus;
 
-	public Boolean getIsFinish() {
-		return isFinish;
-	}
-
-	public void setIsFinish(Boolean isFinish) {
-		this.isFinish = isFinish;
-	}
-
-	public Integer getFaceStatus() {
-		return faceStatus;
-	}
-
-	public void setFaceStatus(Integer faceStatus) {
-		this.faceStatus = faceStatus;
-	}
+	
 
 }

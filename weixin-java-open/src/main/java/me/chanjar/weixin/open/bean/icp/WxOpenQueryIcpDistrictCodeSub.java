@@ -5,11 +5,18 @@ import java.util.List;
 
 import com.google.gson.annotations.SerializedName;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 /**
  * 下级区域信息列表
  * @author byk
  *
  */
+@Getter
+@Setter
+@NoArgsConstructor
 public class WxOpenQueryIcpDistrictCodeSub implements Serializable{
 
 	/**
@@ -41,37 +48,5 @@ public class WxOpenQueryIcpDistrictCodeSub implements Serializable{
 	@SerializedName("sub_list")
 	private List<WxOpenQueryIcpDistrictCodeSub> subList;
 
-	public Integer getType() {
-		return type;
-	}
-
-	public void setType(Integer type) {
-		this.type = type;
-	}
-
-	public Integer getCode() {
-		return code;
-	}
-
-	public void setCode(Integer code) {
-		this.code = code;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public List<WxOpenQueryIcpDistrictCodeSub> getSubList() {
-		return subList;
-	}
-
-	public void setSubList(List<WxOpenQueryIcpDistrictCodeSub> subList) {
-		this.subList = subList;
-	}
-
-
+	
 }

@@ -4,6 +4,9 @@ import java.util.List;
 
 import com.google.gson.annotations.SerializedName;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import me.chanjar.weixin.open.bean.result.WxOpenResult;
 
 /**
@@ -11,6 +14,9 @@ import me.chanjar.weixin.open.bean.result.WxOpenResult;
  * @author byk
  *
  */
+@Getter
+@Setter
+@NoArgsConstructor
 public class WxOpenQueryIcpDistrictCodeResult extends WxOpenResult{
 
 	/**
@@ -20,13 +26,6 @@ public class WxOpenQueryIcpDistrictCodeResult extends WxOpenResult{
 	@SerializedName("items")
 	private List<WxOpenQueryIcpDistrictCodeSub> items;
 
-	public List<WxOpenQueryIcpDistrictCodeSub> getItems() {
-		return items;
-	}
-
-	public void setItems(List<WxOpenQueryIcpDistrictCodeSub> items) {
-		this.items = items;
-	}
-
+	
 
 }

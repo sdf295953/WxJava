@@ -229,6 +229,20 @@ public interface WxOpenComponentService {
   @Deprecated
   WxOpenFastMaService getWxFastMaServiceByAppid(String appid);
 
+  /**
+   * 小程序认证
+   * @param appid
+   * @return
+   */
+  WxOpenMaAuthService getWxOpenMaAuthServiceByAppid(String appid);
+
+
+  /**
+   * 小程序备案
+   * @param appid
+   * @return
+   */
+  WxOpenMaIcpService getWxOpenMaIcpServiceByAppid(String appid);
 
   /**
    * 获取指定appid的小商店服务

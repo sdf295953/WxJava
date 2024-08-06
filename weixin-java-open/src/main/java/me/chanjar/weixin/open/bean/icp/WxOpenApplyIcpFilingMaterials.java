@@ -4,11 +4,18 @@ import java.util.List;
 
 import com.google.gson.annotations.SerializedName;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 /**
  * 其他备案媒体材料
  * @author byk
  *
  */
+@Getter
+@Setter
+@NoArgsConstructor
 public class WxOpenApplyIcpFilingMaterials {
 
 	/**
@@ -71,86 +78,5 @@ public class WxOpenApplyIcpFilingMaterials {
 	@SerializedName("holding_certificate_photo")
 	private List<String> holdingCertificatePhoto;
 
-	public List<String> getCommitmentLetter() {
-		return commitmentLetter;
-	}
-
-	public void setCommitmentLetter(List<String> commitmentLetter) {
-		this.commitmentLetter = commitmentLetter;
-	}
-
-	public List<String> getBusinessNameChangeLetter() {
-		return businessNameChangeLetter;
-	}
-
-	public void setBusinessNameChangeLetter(List<String> businessNameChangeLetter) {
-		this.businessNameChangeLetter = businessNameChangeLetter;
-	}
-
-	public List<String> getPartyBuildingConfirmationLetter() {
-		return partyBuildingConfirmationLetter;
-	}
-
-	public void setPartyBuildingConfirmationLetter(List<String> partyBuildingConfirmationLetter) {
-		this.partyBuildingConfirmationLetter = partyBuildingConfirmationLetter;
-	}
-
-	public List<String> getPromiseVideo() {
-		return promiseVideo;
-	}
-
-	public void setPromiseVideo(List<String> promiseVideo) {
-		this.promiseVideo = promiseVideo;
-	}
-
-	public List<String> getAuthenticityResponsibilityLetter() {
-		return authenticityResponsibilityLetter;
-	}
-
-	public void setAuthenticityResponsibilityLetter(List<String> authenticityResponsibilityLetter) {
-		this.authenticityResponsibilityLetter = authenticityResponsibilityLetter;
-	}
-
-	public List<String> getAuthenticityCommitmentLetter() {
-		return authenticityCommitmentLetter;
-	}
-
-	public void setAuthenticityCommitmentLetter(List<String> authenticityCommitmentLetter) {
-		this.authenticityCommitmentLetter = authenticityCommitmentLetter;
-	}
-
-	public List<String> getWebsiteConstructionProposal() {
-		return websiteConstructionProposal;
-	}
-
-	public void setWebsiteConstructionProposal(List<String> websiteConstructionProposal) {
-		this.websiteConstructionProposal = websiteConstructionProposal;
-	}
-
-	public List<String> getSubjectOtherMaterials() {
-		return subjectOtherMaterials;
-	}
-
-	public void setSubjectOtherMaterials(List<String> subjectOtherMaterials) {
-		this.subjectOtherMaterials = subjectOtherMaterials;
-	}
-
-	public List<String> getAppletsOtherMaterials() {
-		return appletsOtherMaterials;
-	}
-
-	public void setAppletsOtherMaterials(List<String> appletsOtherMaterials) {
-		this.appletsOtherMaterials = appletsOtherMaterials;
-	}
-
-	public List<String> getHoldingCertificatePhoto() {
-		return holdingCertificatePhoto;
-	}
-
-	public void setHoldingCertificatePhoto(List<String> holdingCertificatePhoto) {
-		this.holdingCertificatePhoto = holdingCertificatePhoto;
-	}
-
-
-
+	
 }

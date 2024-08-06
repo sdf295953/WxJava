@@ -1,14 +1,14 @@
 package me.chanjar.weixin.open.bean.icp;
 
+import java.io.Serializable;
+import java.util.List;
+
 import com.google.gson.annotations.SerializedName;
+
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import me.chanjar.weixin.open.bean.result.WxOpenResult;
-import org.jetbrains.annotations.Nullable;
-
-import java.io.Serializable;
-import java.util.List;
 
 
 /**

@@ -1,5 +1,8 @@
 package me.chanjar.weixin.open.bean.icp;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import me.chanjar.weixin.open.bean.result.WxOpenResult;
 
 /**
@@ -7,6 +10,9 @@ import me.chanjar.weixin.open.bean.result.WxOpenResult;
  * @author byk
  *
  */
+@Getter
+@Setter
+@NoArgsConstructor
 public class WxOpenIcpEntranceInfoResult extends WxOpenResult{
 	/**
 	 *
@@ -18,13 +24,7 @@ public class WxOpenIcpEntranceInfoResult extends WxOpenResult{
 	 */
 	private WxOpenIcpEntranceInfoData info;
 
-	public WxOpenIcpEntranceInfoData getInfo() {
-		return info;
-	}
-
-	public void setInfo(WxOpenIcpEntranceInfoData info) {
-		this.info = info;
-	}
+	
 
 
 }

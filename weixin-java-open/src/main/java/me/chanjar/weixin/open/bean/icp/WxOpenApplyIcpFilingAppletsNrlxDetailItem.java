@@ -4,11 +4,18 @@ import java.io.Serializable;
 
 import com.google.gson.annotations.SerializedName;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 /**
  *
  * @author byk
  *
  */
+@Getter
+@Setter
+@NoArgsConstructor
 public class WxOpenApplyIcpFilingAppletsNrlxDetailItem implements Serializable{
 
 	/**
@@ -36,29 +43,5 @@ public class WxOpenApplyIcpFilingAppletsNrlxDetailItem implements Serializable{
 	@SerializedName("media")
 	private Integer media;
 
-	public Integer getType() {
-		return type;
-	}
-
-	public void setType(Integer type) {
-		this.type = type;
-	}
-
-	public Integer getCode() {
-		return code;
-	}
-
-	public void setCode(Integer code) {
-		this.code = code;
-	}
-
-	public Integer getMedia() {
-		return media;
-	}
-
-	public void setMedia(Integer media) {
-		this.media = media;
-	}
-
-
+	
 }

@@ -4,6 +4,13 @@ import java.io.Serializable;
 
 import com.google.gson.annotations.SerializedName;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@NoArgsConstructor
 public class WxOpenIcpEntranceInfoData implements Serializable{
 
 
@@ -42,47 +49,5 @@ public class WxOpenIcpEntranceInfoData implements Serializable{
 	@SerializedName("sms_verify_status")
 	private Integer smsVerifyStatus;
 
-	public Integer getStatus() {
-		return status;
-	}
-
-	public void setStatus(Integer status) {
-		this.status = status;
-	}
-
-	public Boolean getIsCanceling() {
-		return isCanceling;
-	}
-
-	public void setIsCanceling(Boolean isCanceling) {
-		this.isCanceling = isCanceling;
-	}
-
-	public WxOpenIcpEntranceAuditData getAuditData() {
-		return auditData;
-	}
-
-	public void setAuditData(WxOpenIcpEntranceAuditData auditData) {
-		this.auditData = auditData;
-	}
-
-	public Integer getAvailable() {
-		return available;
-	}
-
-	public void setAvailable(Integer available) {
-		this.available = available;
-	}
-
-	public Integer getSmsVerifyStatus() {
-		return smsVerifyStatus;
-	}
-
-	public void setSmsVerifyStatus(Integer smsVerifyStatus) {
-		this.smsVerifyStatus = smsVerifyStatus;
-	}
-
-
-
-
+	
 }

@@ -1,5 +1,7 @@
 package me.chanjar.weixin.open.api.impl;
 
+import cn.binarywang.wx.miniapp.api.WxMaService;
+import cn.binarywang.wx.miniapp.api.impl.WxMaServiceImpl;
 import cn.binarywang.wx.miniapp.bean.WxMaJscode2SessionResult;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
@@ -59,6 +61,10 @@ public class WxOpenComponentServiceImpl implements WxOpenComponentService {
   private static final Map<String, WxOpenFastMaService> WX_OPEN_FAST_MA_SERVICE_MAP = new ConcurrentHashMap<>();
 
   private static final Map<String, WxOpenMinishopService> WX_OPEN_MINISHOP_SERVICE_MAP = new ConcurrentHashMap<>();
+
+  private static final Map<String, WxOpenMaAuthService> WX_OPEN_MAAUTH_SERVICE_MAP = new ConcurrentHashMap<>();
+
+  private static final Map<String, WxOpenMaIcpService> WX_OPEN_MAICP_SERVICE_MAP = new ConcurrentHashMap<>();
 
   private final WxOpenService wxOpenService;
 
@@ -133,6 +139,40 @@ public class WxOpenComponentServiceImpl implements WxOpenComponentService {
     }
 
     return minishopService;
+  }
+
+  @Override
+  public WxOpenMaAuthService getWxOpenMaAuthServiceByAppid(String appid) {
+    WxOpenMaAuthService miniauthService = WX_OPEN_MAAUTH_SERVICE_MAP.get(appid);
+    if (miniauthService == null) {
+      synchronized (WX_OPEN_MINISHOP_SERVICE_MAP) {
+        miniauthService = WX_OPEN_MAAUTH_SERVICE_MAP.get(appid);
+        if (miniauthService == null) {
+          WxMaService maService = new WxMaServiceImpl();
+          maService.setWxMaConfig(getWxOpenConfigStorage().getWxMaConfig(appid));
+          miniauthService = new WxOpenMaAuthServiceImpl(maService);
+          WX_OPEN_MAAUTH_SERVICE_MAP.put(appid, miniauthService);
+        }
+      }
+    }
+
+    return miniauthService;
+  }
+
+  @Override
+  public WxOpenMaIcpService getWxOpenMaIcpServiceByAppid(String appid) {
+    WxOpenMaIcpService miniicpService = WX_OPEN_MAICP_SERVICE_MAP.get(appid);
+    if (miniicpService == null) {
+      synchronized (WX_OPEN_MINISHOP_SERVICE_MAP) {
+        miniicpService = WX_OPEN_MAICP_SERVICE_MAP.get(appid);
+        if (miniicpService == null) {
+          miniicpService = new WxOpenMaIcpServiceImpl(getWxOpenService());
+          WX_OPEN_MAICP_SERVICE_MAP.put(appid, miniicpService);
+        }
+      }
+    }
+
+    return miniicpService;
   }
 
   public WxOpenService getWxOpenService() {

@@ -4,9 +4,16 @@ import java.io.Serializable;
 
 import com.google.gson.annotations.SerializedName;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 /**
  * 个人主体额外信息
  */
+@Getter
+@Setter
+@NoArgsConstructor
 public class WxOpenApplyIcpFilingSubjectPersonalInfo implements Serializable{
 
 	/**
@@ -19,18 +26,7 @@ public class WxOpenApplyIcpFilingSubjectPersonalInfo implements Serializable{
 	@SerializedName("residence_permit")
 	private String residencePermit;
 
-	public String getResidencePermit() {
-		return residencePermit;
-	}
-
-	public void setResidencePermit(String residencePermit) {
-		this.residencePermit = residencePermit;
-	}
-
-	@Override
-	public String toString() {
-		return "WxOpenApplyIcpFilingSubjectPersonalInfo [residencePermit=" + residencePermit + "]";
-	}
+	
 
 
 }

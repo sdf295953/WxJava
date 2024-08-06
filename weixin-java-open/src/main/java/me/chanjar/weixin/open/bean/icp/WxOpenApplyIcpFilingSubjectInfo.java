@@ -4,11 +4,18 @@ import java.io.Serializable;
 
 import com.google.gson.annotations.SerializedName;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 /**
  *
  * @author byk
  *
  */
+@Getter
+@Setter
+@NoArgsConstructor
 public class WxOpenApplyIcpFilingSubjectInfo implements Serializable{
 
 	/**
@@ -46,46 +53,5 @@ public class WxOpenApplyIcpFilingSubjectInfo implements Serializable{
 	@SerializedName("legal_person_info")
 	private WxOpenApplyIcpFilingSubjectLegaPersonInfo legalPersonInfo;
 
-	public WxOpenApplyIcpFilingSubjectBaseInfo getBaseInfo() {
-		return baseInfo;
-	}
-
-	public void setBaseInfo(WxOpenApplyIcpFilingSubjectBaseInfo baseInfo) {
-		this.baseInfo = baseInfo;
-	}
-
-	public WxOpenApplyIcpFilingSubjectPersonalInfo getPersonalInfo() {
-		return personalInfo;
-	}
-
-	public void setPersonalInfo(WxOpenApplyIcpFilingSubjectPersonalInfo personalInfo) {
-		this.personalInfo = personalInfo;
-	}
-
-	public WxOpenApplyIcpFilingSubjectOrganizeInfo getOrganizeInfo() {
-		return organizeInfo;
-	}
-
-	public void setOrganizeInfo(WxOpenApplyIcpFilingSubjectOrganizeInfo organizeInfo) {
-		this.organizeInfo = organizeInfo;
-	}
-
-	public WxOpenApplyIcpFilingSubjectPrincipalInfo getPrincipalInfo() {
-		return principalInfo;
-	}
-
-	public void setPrincipalInfo(WxOpenApplyIcpFilingSubjectPrincipalInfo principalInfo) {
-		this.principalInfo = principalInfo;
-	}
-
-	public WxOpenApplyIcpFilingSubjectLegaPersonInfo getLegalPersonInfo() {
-		return legalPersonInfo;
-	}
-
-	public void setLegalPersonInfo(WxOpenApplyIcpFilingSubjectLegaPersonInfo legalPersonInfo) {
-		this.legalPersonInfo = legalPersonInfo;
-	}
-
-
-
+	
 }
